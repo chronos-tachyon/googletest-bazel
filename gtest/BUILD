@@ -38,6 +38,7 @@ cc_library(
     deps = [
       ":gtest_prod",
     ],
+    includes = ["../."],
     linkopts = ["-pthread"],
     visibility = ["//visibility:public"],
     testonly = 1,
