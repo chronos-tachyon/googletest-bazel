@@ -38,10 +38,9 @@ cc_library(
     deps = [
       ":gtest_prod",
     ],
-    includes = ["../."],
+    includes = ["external/googletest"],
     linkopts = ["-pthread"],
     visibility = ["//visibility:public"],
-    testonly = 1,
 )
 
 cc_library(
@@ -49,7 +48,6 @@ cc_library(
     srcs = ["gtest_main.cc"],
     deps = [":gtest"],
     visibility = ["//visibility:public"],
-    testonly = 1,
 )
 
 genrule(
